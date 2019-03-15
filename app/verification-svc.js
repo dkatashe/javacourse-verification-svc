@@ -24,6 +24,7 @@ app.get('/get-verification-code/:id', (req, res) => {
       capitalization: 'uppercase'
     })
 
+    console.log('id: ' + req.params['id'] + ', code: ' + verifCode)
     res.status(200).send('For your id \'' + req.params['id'] + '\' verification code is: ' + verifCode)
   } else {
     res.status(400).send('Error: \'id\' should be numeric')
